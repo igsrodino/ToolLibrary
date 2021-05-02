@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include=".vs\VSWorkspaceState.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".vs\Interfaces%283%29\v16\TestStore\0\000.testlog" />
+    <None Include=".vs\Interfaces%283%29\v16\TestStore\0\testlog.manifest" />
+    <None Include=".vs\slnx.sqlite" />
+  </ItemGroup>
+
+</Project>
