@@ -1,12 +1,14 @@
 ﻿using System;
 
-namespace CAB301
+namespace Assignment
 {
     class Program
     {
-
+        private static ToolLibrarySystem toolLibrarySystem = new ToolLibrarySystem();
         static void Main(string[] args)
         {
+            toolLibrarySystem.add(new Member("John", "Smith", "0400000000", "1234"));
+            toolLibrarySystem.add(new Tool("Hammer"));
             Intro();
 
             int userChoice = Convert.ToInt32(Console.ReadLine());

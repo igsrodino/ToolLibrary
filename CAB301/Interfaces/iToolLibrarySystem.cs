@@ -1,7 +1,7 @@
 ﻿using Assignment;
 
 
-namespace Interfaces
+namespace Assignment
 {
     interface iToolLibrarySystem
     {

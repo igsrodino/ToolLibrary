@@ -1,11 +1,17 @@
 ﻿using Assignment;
 using System;
 
-namespace Interfaces
+namespace Assignment
 {
 
     public class ToolLibrarySystem : iToolLibrarySystem
     {
+        private MemberCollection memberCollection;
+        public ToolLibrarySystem()
+        {
+            memberCollection = new MemberCollection();
+        }
+
         public void add(Tool aTool)
         {
             throw new NotImplementedException();
@@ -18,7 +24,7 @@ namespace Interfaces
 
         public void add(Member aMember)
         {
-            throw new NotImplementedException();
+            memberCollection.add(aMember);
         }
 
         public void borrowTool(Member aMember, Tool aTool)
