@@ -14,7 +14,7 @@ namespace Assignment
 
         public void add(Tool aTool)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Not implemented");
         }
 
         public void add(Tool aTool, int quantity)

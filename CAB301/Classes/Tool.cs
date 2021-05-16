@@ -23,12 +23,14 @@ namespace Assignment
         public int AvailableQuantity { get => this.availableQuantity; set => this.availableQuantity = value; }        
         public int NoBorrowings { get => this.noBorrowings; set => this.noBorrowings = value; }
 
-
+       // iMemberCollection iTool.GetBorrowers { get; }
         public MemberCollection GetBorrowers => throw new NotImplementedException();
 
         public void addBorrower(Member aMember)
         {
-            throw new NotImplementedException();
+            availableQuantity--;
+            noBorrowings++;
+           // members.Remove(aMember);
         }
 
         public int CompareTo(Tool other)
@@ -38,7 +40,8 @@ namespace Assignment
 
         public void deleteBorrower(Member aMember)
         {
-            throw new NotImplementedException();
+            availableQuantity--;
+
         }
         public override string ToString()
         {

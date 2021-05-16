@@ -15,8 +15,4 @@
     <None Include=".vs\slnx.sqlite" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Tests\" />
-  </ItemGroup>
-
 </Project>
