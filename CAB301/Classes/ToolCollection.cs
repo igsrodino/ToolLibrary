@@ -17,8 +17,6 @@ namespace Assignment
                 new ToolCollection[5]["Voltage Tester", "Oscilloscopes", "Thermal Imaging", "Data Test Tool", "Insullation Tester"], //Electric Tools
                 new ToolCollection[5]["Test Equipment", "Safety Equipment", "Basic Hand Tools", "Circuit Protection", "Cable Tools"], //Electricity Tools
                 new ToolCollection[6]["Jacks", "Air Compressors", "Battery Chargers", "Socket Tools", "Braking", "Drivetrain"], //Automoti
-
-
             };*/
 
         Tool[] collection;
@@ -39,25 +37,17 @@ namespace Assignment
 
         public void delete(Tool aTool)
         {
-            // Array = { 1, 2, 3, 4, 5, 6, 7 }
-            // Array = { 1, 2, null, 4, 5, 6, 7 }
-
-            // if i == 4, array[i] = array[i+1] 
-
             // Array.IndexOf(collection, aTool) will return the index if it's found, or -1 if it's not found
-            int i = Array.IndexOf(collection, aTool);
+            int index = Array.IndexOf(collection, aTool);
 
             // for (int i = something; i < collection.Length; i++) <- if we start at -1 we'll get an error because arrays start at 0, if it's not found we shouldn't attempt to loop
 
-            if (i > -1) {
+            if (index > -1) {
 
-                // for ( index instance; condition; what we do after each loop ) { }
-
-                for (; i < Number; i++)
+                for (; index < Number; index++)
                 {
-                    collection[i] = collection[i + 1];
+                    collection[index] = collection[index + 1];
                 }
-
                 count--;
             }
             Console.WriteLine("Tool deleted.");

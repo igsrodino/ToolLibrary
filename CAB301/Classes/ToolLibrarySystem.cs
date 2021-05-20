@@ -89,7 +89,7 @@ namespace Assignment
 
         public void displayTopTHree()
         {
-            // You have to implement some sorting algorithm to do this, check lecture slides
+            // Implement some sorting algorithm to do this, check lecture slides mergesort?
             throw new NotImplementedException();
         }
 

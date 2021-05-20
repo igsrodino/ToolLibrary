@@ -78,7 +78,6 @@ namespace Assignment
 			// similar shit, except we're just returning an int
 			if (ptr != null)
             {
-				
 				int i = Count(ptr.RChild) + Count(ptr.LChild);
 				return 1 + i;
 				// return sum of left and right children + 1
@@ -101,16 +100,12 @@ namespace Assignment
         {
 			if (ptr != null)
             {
-				// do shit like what insert is doing, except we're not insertig we're just adding shit to the
-				// 'ref Member[] array' argument passed in
-				array[0] = new Member("a", "b", "c", "d");
 				if (ptr != null)
 				{
-					int j = Count(ptr.RChild) + Count(ptr.LChild);
-					i = 1 + j;
 					toArray(ptr.LChild, ref i, ref array);
+					array[i++] = ptr.Member;
+					toArray(ptr.RChild, ref i, ref array);
 				}
-				// toArray(left child, ref i, ref arr) etc.
 			}
         }
 
