@@ -14,18 +14,10 @@ namespace Assignment
 
         public int Number => throw new NotImplementedException();
 
+     
         public void add(Member aMember)
         {
-            Console.WriteLine("\n=============================");
-            Console.WriteLine("\nEnter new member details below:");
-            Console.WriteLine("\nFirst Name: ");
-            aMember.FirstName =  Console.ReadLine();       
-            Console.WriteLine("\nLast Name: ");
-            aMember.LastName =  Console.ReadLine();       
-            Console.WriteLine("\nPhone Number: ");
-            aMember.ContactNumber =  Console.ReadLine();           
-            Console.WriteLine("\nPIN: ");
-            aMember.PIN =  Console.ReadLine();
+            
             Console.WriteLine("\nNew member created succesfully!\nDetails: {0}\nPress Any Key to return to Previous Menu\n", aMember);
             Console.ReadKey();
             return;
@@ -33,17 +25,17 @@ namespace Assignment
 
         public void delete(Member aMember)
         {
-            throw new NotImplementedException();
+            memberTree.Delete(aMember);
         }
 
         public bool search(Member aMember)
         {
-            throw new NotImplementedException();
+            return memberTree.Search(aMember);
         }
 
         public Member[] toArray()
         {
-            throw new NotImplementedException();
+            return memberTree.toArray();
         }
     }
 }

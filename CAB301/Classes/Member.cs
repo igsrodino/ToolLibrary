@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Linq;
 
 namespace Assignment
 {
@@ -19,58 +19,21 @@ namespace Assignment
             this.tools = new ToolCollection();
         }
 
-        public string FirstName {
-            get {
-                return firstName;
-            }
-            set
-            {
-                firstName = value;
-            }
-        }
+        public string FirstName { get => firstName; set => firstName = value; }
+        public string LastName { get => lastName; set => lastName = value; }
+        public string ContactNumber { get => contactNumber; set => contactNumber = value; }
 
-        public string LastName
-        {
-            get
-            {
-                return lastName;
-            }
-            set
-            {
-                lastName = value;
-            }
-        }
-
-        public string ContactNumber
-        {
-            get
-            {
-                return contactNumber;
-            }
-            set
-            {
-                contactNumber = value;
-            }
-        }
-
-        public string PIN
-        {
-            get
-            {
-                return pin;
-            }
-            set
-            {
-                pin = value;
-            }
-        }
+        public string PIN { get => pin; set => pin = value; }
 
 
-        public string[] Tools => throw new NotImplementedException();
+        public string[] Tools => tools.toArray()?.Select(t => t.Name).ToArray();
 
         public void addTool(Tool aTool)
         {
-            throw new NotImplementedException();
+            // a Tool colletion has an array inside it that contains tools.
+            // you can access this array by using ToolCollection.toArray() where ToolCollection is an instance of tool collection
+            if (tools.toArray().Length < 3)
+                tools.add(aTool);
         }
 
         public int CompareTo(Member other)
@@ -80,7 +43,7 @@ namespace Assignment
 
         public void deleteTool(Tool aTool)
         {
-            throw new NotImplementedException();
+            tools.delete(aTool);
         }
 
         public override string ToString()

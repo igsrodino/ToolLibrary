@@ -32,20 +32,15 @@ namespace Assignment
             switch (keyInfo.Key)
             {
                 case ConsoleKey.D0:
-                    {
-                        return;
-                    }
+                    return;
                 case ConsoleKey.D1:
-                    {
-                        StaffLogin();
-                        return;
-                    }
+                    StaffLogin();
+                    break;
                 case ConsoleKey.D2:
-                    {
-                        MemberMenu();
-                        return;
-                    }
+                    MemberMenu();
+                    break;
             }
+
             Intro();
         }
 
@@ -58,22 +53,9 @@ namespace Assignment
             string username = Console.ReadLine();
             Console.WriteLine("\nEnter Password: ");
             string password = Console.ReadLine();
-            if (username == "Staff" && password == "today123")
-            {
+            if (username.Equals("staff", StringComparison.OrdinalIgnoreCase) &&
+                password.Equals("today123", StringComparison.OrdinalIgnoreCase))
                 StaffMenu();
-            }
-            else if (username == "staff" && password == "today123")
-            {
-                StaffMenu();
-            }
-            else if (username == "Staff" && password == "Today123")
-            {
-                StaffMenu();
-            }
-            else if (username == "staff" && password == "Today123")
-            {
-                StaffMenu();
-            }
             else
             {
                 Console.WriteLine("\nIncorrect Login Details. \nPress any key to go back to Main Menu.\n");
@@ -99,53 +81,41 @@ namespace Assignment
             switch (keyInfo.Key)
             {
                 case ConsoleKey.D0:
-                    {
-                        Intro();
-                        return;
-                    }
+                    return;
                 case ConsoleKey.D1:
-                    {
-                        AddTools();
-                        StaffMenu();
-                        return;
-                    }
+                    AddTools();
+                    break;
                 case ConsoleKey.D3:
-                    {
-                        DeleteTools();
-                        StaffMenu();
-                        return;
-                    }
+                    DeleteTools();
+                    break;
                 case ConsoleKey.D4:
-                    {
-                        toolLibrarySystem.add(new Member("", "", "", ""));
-                        Console.WriteLine(memberCollection);
-                        StaffMenu();
-                        return;
-                    }
+                    Console.WriteLine("\n=============================");
+                    Console.WriteLine("\nEnter new member details below:");
+                    Console.WriteLine("\nFirst Name: ");
+                    string FirstName = Console.ReadLine();
+                    Console.WriteLine("\nLast Name: ");
+                    string LastName = Console.ReadLine();
+                    Console.WriteLine("\nPhone Number: ");
+                    string ContactNumber = Console.ReadLine();
+                    Console.WriteLine("\nPIN: ");
+                    string PIN = Console.ReadLine();
 
+                    toolLibrarySystem.add(new Member(FirstName, LastName, ContactNumber, PIN));
+                    break;
             }
+
+            StaffMenu();
         }
 
         static void AddTools()
         {
             Console.WriteLine("\n=============================\n");
-            ToolCollection[] GardeningTools = new ToolCollection[5];
-            var LineTrimmers = new ToolCollection();
-            var LawnMowers = new ToolCollection();
-            var HandTools = new ToolCollection();
-            var Wheelbarrows = new ToolCollection();
-            var GardenPowerTools = new ToolCollection();
 
-            GardeningTools[0] = LineTrimmers;
-            GardeningTools[1] = LawnMowers;
-            GardeningTools[2] = HandTools;
-            GardeningTools[3] = Wheelbarrows;
-            GardeningTools[4] = GardenPowerTools;
 
             Console.WriteLine("Tool Name: ");
             var tool = new Tool(name);
-            tool.Name = Console.ReadLine();        
-            GardeningTools[0].add(tool);
+            tool.Name = Console.ReadLine();
+            toolLibrarySystem.add(tool);
             Console.WriteLine("You added tool: {0}", tool.Name);
             Console.WriteLine("Press any key to go back to Menu.");
             Console.ReadKey();
