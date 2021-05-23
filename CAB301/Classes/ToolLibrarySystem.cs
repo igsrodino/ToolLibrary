@@ -6,7 +6,7 @@ namespace Assignment
 
     public class ToolLibrarySystem : iToolLibrarySystem
     {
-        private ToolCollection[/*category*/][/*tooltype*/] toolCollection;
+        private ToolCollection[/*cat*/][/*tool*/] toolCollection;
         private MemberCollection memberCollection;
         public ToolLibrarySystem()
         {
@@ -39,6 +39,11 @@ namespace Assignment
         {
             if (!memberCollection.search(aMember))
                 memberCollection.add(aMember);
+            else
+            {
+                Console.WriteLine("Member already exists!\nPress any key to continue.");
+                Console.ReadKey();
+            }
         }
 
         public void borrowTool(Member aMember, Tool aTool)
@@ -70,8 +75,17 @@ namespace Assignment
 
         public void delete(Member aMember)
         {
-            // delete a member, can't do it if they are borrowing shit tho
-            throw new NotImplementedException();
+            // delete a member, can't do it if they are borrowing 
+            if (memberCollection.search(aMember))
+            {
+                memberCollection.delete(aMember);
+
+            }
+            else
+            {
+                Console.WriteLine("Member not found.\nPress any key to continue.");
+                Console.ReadKey();
+            }
         }
 
         public void displayBorrowingTools(Member aMember)
@@ -82,7 +96,8 @@ namespace Assignment
 
         public void displayTools(string aToolType)
         {
-            // this is tricky, but you have to figure out how to index the ToolCollection with a string
+            // index the ToolCollection with a string
+
             // then print out what is inside that tool collection
             throw new NotImplementedException();
         }

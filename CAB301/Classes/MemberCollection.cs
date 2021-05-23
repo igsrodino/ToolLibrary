@@ -17,15 +17,18 @@ namespace Assignment
      
         public void add(Member aMember)
         {
-            
             Console.WriteLine("\nNew member created succesfully!\nDetails: {0}\nPress Any Key to return to Previous Menu\n", aMember);
+            memberTree.Insert(aMember);
             Console.ReadKey();
             return;
         }
 
         public void delete(Member aMember)
         {
+            Console.WriteLine("\nFollowing member deleted succesfully!\nDetails: {0}\nPress Any Key to return to Previous Menu\n", aMember);
             memberTree.Delete(aMember);
+            Console.ReadKey();
+            return;
         }
 
         public bool search(Member aMember)

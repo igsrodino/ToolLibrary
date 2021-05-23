@@ -16,15 +16,17 @@ namespace Assignment
                 new ToolCollection[6]["Sanding Tools", "Brushes", "Rollers", "Paint Removal Tools", "Paint Scrapers", "Sprayers"], //Painting Tools
                 new ToolCollection[5]["Voltage Tester", "Oscilloscopes", "Thermal Imaging", "Data Test Tool", "Insullation Tester"], //Electric Tools
                 new ToolCollection[5]["Test Equipment", "Safety Equipment", "Basic Hand Tools", "Circuit Protection", "Cable Tools"], //Electricity Tools
-                new ToolCollection[6]["Jacks", "Air Compressors", "Battery Chargers", "Socket Tools", "Braking", "Drivetrain"], //Automoti
+                new ToolCollection[6]["Jacks", "Air Compressors", "Battery Chargers", "Socket Tools", "Braking", "Drivetrain"], //Automotive Tools
             };*/
 
         Tool[] collection;
+        //= new Tool[9]{ "Gardening Tools", "Flooring Tools", "Fencing Tools", "Measuring Tools", "Cleaning Tools", "Painting Tools", "Electric Tools", "Electricity Tools", "Automotive Tools" };
+        
         int count = 0;
 
         public ToolCollection()
         {
-            collection = new Tool[Int32.MaxValue];
+            collection = new Tool[1000000];
         }
 
         public int Number => count;
@@ -37,10 +39,7 @@ namespace Assignment
 
         public void delete(Tool aTool)
         {
-            // Array.IndexOf(collection, aTool) will return the index if it's found, or -1 if it's not found
             int index = Array.IndexOf(collection, aTool);
-
-            // for (int i = something; i < collection.Length; i++) <- if we start at -1 we'll get an error because arrays start at 0, if it's not found we shouldn't attempt to loop
 
             if (index > -1) {
 

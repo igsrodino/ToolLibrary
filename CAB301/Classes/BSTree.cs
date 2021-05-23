@@ -75,7 +75,6 @@ namespace Assignment
 
 		private int Count(BTreeNode ptr)
         {
-			// similar shit, except we're just returning an int
 			if (ptr != null)
             {
 				int i = Count(ptr.RChild) + Count(ptr.LChild);
@@ -89,7 +88,7 @@ namespace Assignment
 		public Member[] toArray()
         {
 			int i = 0;
-			Member[] array = new Member[0]; // You need to implement BSTree.Count to get the proper number
+			Member[] array = new Member[0]; // Need to implement BSTree.Count to get the proper number
 
 			toArray(root, ref i, ref array);
 
