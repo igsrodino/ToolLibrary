@@ -45,7 +45,7 @@ namespace Assignment
         }
         public override string ToString()
         {
-            return base.ToString();
+            return string.Format("\nTool Name: {0} Quantity: {1} Available: {2}", name, quantity, availableQuantity);
         }
     }
 

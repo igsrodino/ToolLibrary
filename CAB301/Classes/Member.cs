@@ -30,8 +30,6 @@ namespace Assignment
 
         public void addTool(Tool aTool)
         {
-            // a Tool colletion has an array inside it that contains tools.
-            // you can access this array by using ToolCollection.toArray() where ToolCollection is an instance of tool collection
             if (tools.toArray().Length < 3)
                 tools.add(aTool);
         }

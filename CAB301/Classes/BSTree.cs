@@ -88,7 +88,7 @@ namespace Assignment
 		public Member[] toArray()
         {
 			int i = 0;
-			Member[] array = new Member[0]; // Need to implement BSTree.Count to get the proper number
+			Member[] array = new Member[Count()]; // Need to implement BSTree.Count to get the proper number
 
 			toArray(root, ref i, ref array);
 
@@ -99,12 +99,9 @@ namespace Assignment
         {
 			if (ptr != null)
             {
-				if (ptr != null)
-				{
-					toArray(ptr.LChild, ref i, ref array);
-					array[i++] = ptr.Member;
-					toArray(ptr.RChild, ref i, ref array);
-				}
+				toArray(ptr.LChild, ref i, ref array);
+				array[i++] = ptr.Member;
+				toArray(ptr.RChild, ref i, ref array);
 			}
         }
 
