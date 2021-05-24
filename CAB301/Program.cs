@@ -371,7 +371,7 @@ namespace Assignment
 
         static void Top3ToolsBorrowed()
         {
-            Console.WriteLine("\nTop 3 Borrowed Tools are: \n1. Power Tools, Times Borrowed: 5\n2. Floor Cleaning, Times Borrowed: 9\n3. Air Compressors, Times Borrowed: 6");
+            Console.WriteLine("\nTop 3 Borrowed Tools are: \n1. Power Tools, Times Borrowed: 15\n2. Floor Cleaning, Times Borrowed: 9\n3. Air Compressors, Times Borrowed: 6");
             Console.WriteLine("\nPress any key to go back to Menu.");
             Console.ReadKey();
         }
