@@ -12,36 +12,9 @@ namespace Assignment
 
         private static Member loggedInMember; 
 
-        //  private static Tool tool = new Tool();
         static void Main(string[] args)
         {
-
-/*            int[] testArray = new int[] { 1, 7, 4, 9, 2, 4, 10 };
-            int[] expected = new int[] { 1, 2, 4, 4, 7, 9, 10 };
-
-            int[] sorted = Sorting.MergeSort(testArray);
-
-            if (sorted.SequenceEqual(expected))
-                Console.WriteLine("SORT WORKS!");
-            else
-                Console.WriteLine("MAAAAAAAAAAAAAAAAAATE");*/
-
-            InsertTestData(); // Delete this before submitting
-
-            AddTools();
-
             Intro();
-
-        }
-
-        /// <summary>
-        /// Delete this before submitting
-        /// </summary>
-        static void InsertTestData()
-        {
-            Member newMember = new Member("Tom", "Jones", "0412123123", "1111");
-            memberCollection.add(newMember);
-            toolLibrarySystem.add(newMember);
         }
 
         static void Intro()
